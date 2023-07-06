@@ -100,10 +100,18 @@ html {
 	}
 }
 .organic .card-body img {
-	width: 600px;
+	width: 100%;
 	display: block;
 	margin: auto;
 	border-radius: 10px;
+}
+@media (min-width: 992px) {	
+	.organic .card-body img {
+		width: 600px;
+		display: block;
+		margin: auto;
+		border-radius: 10px;
+	}
 }
 .organic .card-body h2 {
 	font-family: 'Oswald', sans-serif;	
@@ -123,12 +131,3 @@ html {
 ul {
 	list-style-type: "⇒    ";
 }
-
-.download-button {
-	display: inline-block;
-	padding: 10px 20px;
-	background-color: red;
-	color: white;
-	text-decoration: none;
-	border-radius: 5px;
-  }  
