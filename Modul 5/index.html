@@ -23,7 +23,7 @@
 
 
 
-	<title>Kelompok 11 - Materials</title>
+	<title>Kelompok 11 - Modul 5</title>
 	<link rel="icon" href="../img/logo.png">
 </head>
 
@@ -40,12 +40,11 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto nav-pills">
-					<li class="nav-item"> <a class="nav-link page-scroll text-white" href="#modul1">Modul 1</a></li>
+					<li class="nav-item"> <a class="nav-link page-scroll text-white" href="#modul1">Modul 5</a></li>
 					<li class="nav-item"> <a class="nav-link page-scroll text-white" href="#tujuan">Tujuan</a></li>
 					<li class="nav-item"> <a class="nav-link page-scroll text-white" href="#alatbahan">Alat dan Bahan</a></li>
 					<li class="nav-item"> <a class="nav-link page-scroll text-white" href="#percobaan1">Percobaan 1</a></li>
 					<li class="nav-item"> <a class="nav-link page-scroll text-white" href="#percobaan2">Percobaan 2</a></li>
-					<li class="nav-item"> <a class="nav-link page-scroll text-white" href="#percobaan3">Percobaan 3</a></li>
 				</ul>
 			</div>
 		</div>
@@ -59,34 +58,16 @@
 				<div class="card">
 					<div class="card-body">
 						
-						<h1 class="text-center oswald">Wireless</h1> <hr>
+						<h1 class="text-center oswald">Implementasi dan Konfigurasi IP Version 6</h1> <hr>
 						
 						<img src="img/wireless.webp" alt=""> <br>
 
 						<p>
-							Dalam Wireless Jaringan Komputer, terdapat minimal tiga jenis koneksi yang berbeda.
+							IPv6 (Internet Protocol Address v6) adalah sebuah protokol standar yang digunakan untuk mengidentifikasi dan mengarahkan alamat jaringan pada komputer. Dibandingkan dengan versi sebelumnya yaitu IPv4, IPv6 memiliki format alamat yang lebih panjang dengan 128 bit. Hal ini memungkinkan jumlah alamat yang jauh lebih besar, mengatasi masalah penipisan alamat IPv4 yang semakin meningkat. IPv6 juga memiliki fitur tambahan, seperti pemantauan aliran lalu lintas, peningkatan keamanan, dan peningkatan kualitas layanan. Hal ini menjadikan IPv6 sebagai solusi jangka panjang untuk pertumbuhan internet yang pesat dan meningkatnya kebutuhan akan alamat.
 						</p>
 
-						<p>
-							Pertama, terdapat Point-to-Point Protocol (PPP), yang merupakan protokol data link yang
-							sering digunakan untuk membentuk koneksi langsung antara dua node jaringan. PPP memu-
-							ngkinkan autentikasi koneksi, enkripsi transmisi (menggunakan ECP, RFC 1968), dan kom-
-							presi. Biasanya, jenis koneksi ini digunakan untuk menghubungkan dua gedung atau dua
-							BTS (Base Transceiver Station).
-						</p>
-						
-						<p>
-							Kedua, terdapat Point-to-multipoint, yang merupakan pendekatan populer untuk komu-
-							nikasi nirkabel yang melibatkan banyak node, tujuan akhir, atau pengguna akhir. Jenis
-							koneksi ini umumnya digunakan untuk menyediakan wifi atau hotspot dari satu sumber
-							yang dapat diakses oleh banyak client dalam satu jaringan.
-						</p>
-						
-						<p>
-							Ketiga, ada Wireless Bridging yang digunakan untuk menghubungkan dua segmen LAN
-							melalui tautan nirkabel. Koneksi ini membuat kedua segmen LAN berada dalam subnet
-							yang sama, sehingga terlihat seperti dua switch Ethernet yang terhubung oleh kabel, memu-
-							ngkinkan komunikasi antara semua komputer dalam subnet tersebut.
+    					<p>
+							Untuk melakukan subnetting pada IPv6 dapat dilakukan dengan cara berikut. Tentukan jumlah subnet yang diperlukan untuk jaringan Anda. Pilih panjang awalan subnet yang sesuai untuk memenuhi kebutuhan jaringan. Pilih prefix IPv6 yang sesuai dengan panjang awalan subnet yang telah ditentukan. Bagi prefix IPv6 menjadi subnet dengan menggunakan panjang awalan subnet yang telah ditentukan. Tetapkan alamat IPv6 untuk setiap subnet yang telah dibagi. Konfigurasikan perangkat jaringan, seperti router atau switch, dengan alamat IPv6 yang telah ditetapkan untuk setiap subnet. Uji koneksi pada setiap subnet untuk memastikan keberhasilan subnetting IPv6.
 						</p>
 
 					</div>
@@ -105,10 +86,10 @@
 						
 						<h2>Tujuan Praktikum</h2> <hr>
 
-						<p>
-							Tujuan dari praktikum ini adalah Mengetahui dan memahami 3 jenis koneksi pada Jaringan
-							Wireless.
-						</p>
+						<ul>
+							<li>Mengetahui bagaimana konfigurasi static routing menggunakan IPv6</li>
+							<li>Mengimplementasikan konfigurasi IPv6 pada perangkat mikrotik</li>
+						</ul>        				
 						
 					</div>
 				</div>
@@ -133,9 +114,8 @@
 
 						<ol>
 							<li>Cloud Core Router Mikrotik 2 buah</li>
-							<li>Kabel UTP (LAN) 2 buah</li>
+							<li>Kabel UTP (LAN) 3 buah</li>
 							<li>Laptop 2 buah</li>
-							<li>Smartphone 1 buah</li>
 							<li>Software Winbox</li>
 						</ol>
 						
@@ -154,51 +134,40 @@
 					<div class="card-body">
 						
 						<!--  -->
-						<h1 class="text-center oswald">Percobaan 1 : Wireless Point to Point</h1> <hr>
+						<h1 class="text-center oswald">Percobaan 1 : Konfigurasi IP</h1> <hr>
 						
 						<!--  -->
 						<h2>Topologi</h2> <hr>
 						
-						<img src="img/Percobaan 1/Topologi 1.png" alt=""> <br>
+						<img src="img/Topologi 1.png" alt=""> <br>
 
 						<!--  -->
 						<h2>Langkah Percobaan</h2> <hr>
 
 						<ol>
-							<li>Sambungkan kabel UTP dari Laptop 1 ke Router 1 pada interface ether 2</li> <br>
-							<li>Buka aplikasi WinBox pada Laptop 1 dan lakukan koneksi ke Router 1</li> <br>
+							<li>Sambungkan kabel UTP dari Laptop 1 ke Router 1 pada interface ether 2</li><br>
+							<li>Buka aplikasi WinBox pada Laptop 1 dan lakukan koneksi ke Router 1</li><br>
+							<li>Pertama-tama, konfigurasi router untuk mengaktifkan layanan IPv6. Caranya pada tab System \texttt{>} Packages \texttt{>} IPv6 \texttt{>} Enable. Kemudian lakukan reboot pada router agar layanan dapat digunakan.</li><br>
 							
-							<img src="img/Percobaan 1/Langkah_a.png" alt=""> <br>
-	
-							<li>Kemudian atur Router 1 untuk mengaktifkan WLAN pada tab Wireless, pilih wlan1, lalu klik tombol centang. Kemudian atur WLAN pada mode bridge dan isi SSID yang diinginkan, yakni PTP-11.</li> <br>
-	
-							<img src="img/Percobaan 1/Langkah_b.png" alt=""> <br>
+							<img src="img/Langkah_a.png" alt=""> <br>
 							
-							<li>Beri IP pada interface wlan1 yang sudah dibuat pada tab IP \texttt{>} Addresses, dengan IP yaitu 13.59.33.1/24</li> <br>
-	
-							<img src="img/Percobaan 1/Langkah_c.png" alt=""> <br>
-	
-							<li>Sambungkan kabel UTP dari Laptop 2 ke Router 2 pada interface ether 2, dan lakukan koneksi ke Router 2</li> <br>
-	
-							<img src="img/Percobaan 1/Langkah_d.png" alt=""> <br>
+							<li>Konfigurasi IPv6 Router 1 pada ether2 dengan IP yakni 3333:3333:3333::1 /64. Sehingga rentang IP yang berada pada jaringan yang sama dengan router ini adalah pada IP Address 3333:3333:3333:0:0000:0000:0000:0000 hingga 3333:3333:3333:0:ffff:ffff:ffff:ffff.</li><br>
 							
-							<li>Kemudian atur Router 2 untuk mengaktifkan WLAN pada tab Wireless, pilih wlan1, lalu klik tombol centang. Kemudian atur WLAN pada mode station. Kemudian cari sinyal yang sudah dipancarkan oleh Router 1. Pilih Scan kemudian cari SSID yang sama dengan yang diisikan pada Router 1, yakni PTP-11.</li> <br>
+							<img src="img/Langkah_b.png" alt=""> <br>
 							
-							<img src="img/Percobaan 1/Langkah_e.png" alt=""> <br>
-	
-							<li>Beri IP pada interface wlan1 yang sudah dibuat pada tab IP \texttt{>} Addresses, dengan IP yang satu subnet dengan Router 1, yaitu 13.59.33.2/24</li> <br>
+							<li>Konfigurasi juga IPV6 pada Laptop 1 dalam subnet yang sama dengan IP Router 1. Dipilih IP yakni 3333:3333:3333::2 /64.</li><br>
 							
-							<img src="img/Percobaan 1/Langkah_f.png" alt=""> <br>
+							<img src="img/Langkah_c.png" alt=""> <br>
 							
-							<li>Selanjutnya lakukan tes ping antara kedua router untuk memastikan kedua router sudah tersambung. Dapat dilihat kedua router sudah terhubung dengan metode Wireless Point to Point.</li> <br>
+							<li>Setelah IPv6 pada Router 1 dan Laptop 1 sudah dikonfigurasi, lakukan uji coba ping pada kedua perangkat untuk memastikan keduanya sudah saling terhubung.</li><br>
 							
-							<img src="img/Percobaan 1/Langkah_g.png" alt=""> <br>
+							<img src="img/Langkah_d.png" alt=""> <br>
 						</ol>
 
 						<!--  -->
 						<h2>Hasil Percobaan</h2> <hr>
 
-						<img src="img/Percobaan 1/Langkah_g.png" alt=""> <br>
+						<img src="img/Langkah_d.png" alt=""> <br>
 						
 					</div>
 				</div>
@@ -215,125 +184,60 @@
 					<div class="card-body">
 						
 						<!--  -->
-						<h1 class="text-center oswald">Percobaan 2 : Wireless Point to Multipoint</h1> <hr>
+						<h1 class="text-center oswald">Percobaan 2 : Subnetting Antar Network Yang Berbeda</h1> <hr>
 						
 						<!--  -->
 						<h2>Topologi</h2> <hr>
 						
-						<img src="img/Percobaan 2/Topologi 2.png" alt=""> <br>
+						<img src="img/Topologi 2.png" alt=""> <br>
 
 						<!--  -->
 						<h2>Langkah Percobaan</h2> <hr>
 
 						<ol>
-							<li>Percobaan 2 memiliki topologi yang mirip dengan percobaan 1. Lakukan koneksi antara Laptop 1 dengan Router 1 dan Laptop 2 dengan Router 2 seperti yang telah dilakukan pada percobaan 1.</li><br>
+							<li>Lakukan langkah percobaan yang sama pada percobaan 1 untuk menghubungkan Router 1 dan Laptop 1.</li><br>
             
-							<li>Pada Router 1, ubah mode Wireless Router menjadi ap bridge, dan isi SSID yang diinginkan, yakni PTM-11.</li><br>
-							
-							<img src="img/Percobaan 2/Langkah_h.png" alt=""> <br>
+							<li>Hubungkan Router 2 pada ether2 dengan Laptop 2, kemudian buka aplikasi Winbox pada Laptop 2.</li><br>
 
-							<li>Beri IP pada interface wlan1 yang sudah dibuat pada tab IP \texttt{>} Addresses, dengan IP yaitu 4.13.33.1/24</li><br>
+							<li>Lakukan juga konfigurasi pada Router 2 untuk mengaktifkan layanan IPv6. Caranya pada tab System \texttt{>} Packages \texttt{>} IPv6 \texttt{>} Enable. Kemudian lakukan reboot pada router agar layanan dapat digunakan.</li><br>
 
-							<img src="img/Percobaan 2/Langkah_i.png" alt=""> <br>
+							<img src="img/Langkah_e.png" alt=""> <br>
+
+							<li>Sambungkan Router 1 dan Router 2 pada interface ether3. Kemudian tambahkan IPv6 pada router 2 dengan IP Address 4444:4444:4444::2 /64. Sehingga rentang IPnya dimulai dari 4444:4444:4444:0:0000:0000:0000:0000 hingga 4444:4444:4444:0:ffff:ffff:ffff:ffff.</li><br>
 							
-							<li>Kemudian beralih ke Router 2, atur interface Wireless ke mode station. Kemudian cari sinyal yang sudah dipancarkan oleh Router 1. Pilih Scan kemudian cari SSID yang sama dengan yang diisikan pada Router 1, yakni PTP-11.</li><br>
+							<img src="img/Langkah_f.png" alt=""> <br>
 							
-							<img src="img/Percobaan 2/Langkah_j.png" alt=""> <br>
-							<li>Beri IP pada interface wlan1 yang sudah dibuat pada tab IP \texttt{>} Addresses, dengan IP yang satu subnet dengan Router 1, yaitu 4.13.33.2/24</li><br>
+							<li>Tambahkan juga IPv6 pada Router 1 yang berada dalam rentang IP sebelumnya. Dipilih 4444:4444:4444::1 /64.</li><br>
 							
-							<img src="img/Percobaan 2/Langkah_k.png" alt=""> <br>
+							<img src="img/Langkah_g.png" alt=""> <br>
 							
-							<li>Lakukan uji coba ping antara kedua router untuk memastikan kedua router sudah terhubung. Dapat dilihat kedua router sudah terhubung dengan metode Wireless Point to Multipoint.</li><br>
+							<li>Selanjutnya lakukan uji coba ping dari Router 1 ke Router 2 dan sebaliknya untuk memastikan kedua router sudah terhubung.</li><br>
 							
-							<img src="img/Percobaan 2/Langkah_l.png" alt=""> <br>
+							<img src="img/Langkah_h.png" alt=""> <br>
+
+							<li>Konfigurasi IPv6 pada Router 2 dan Laptop 2 untuk membentuk jaringan lokal. IP Address yang dipilih adalah 5555:5555:5555::1 /64. Sehingga rentang IPnya dimulai dari 5555:5555:5555:0:0000:0000:0000:0000 hingga 5555:5555:5555:0:ffff:ffff:ffff:ffff.</li><br>
 							
-							<li>Perbedaan metode Wireless Point to Point dan Wireless Point to Multipoint adalah metode Wireless Point to Point hanya dapat menghubungkan 2 node jaringan saja. Sedangkan pada metode Wireless Point to Multipoint dapat menguhubungkan lebih dari 2 node jaringan. Pada percobaan ini akan dicoba menggunakan perangkat tambahan yaitu 1 buah Smartphone. Buka pengaturan WiFi pada smartphone, dan lakukan koneksi pada jaringan SSID yang sudah diatur pada Router 1. Kemudian ubah pengaturan IP menjadi mode static, dan beri IP yang satu jaringan dengan kedua router, yakni 4.13.33.10 dengan prefix /24.</li><br>
+							<img src="img/Langkah_i.png" alt=""> <br>
 							
-							<img src="img/Percobaan 2/Langkah_m.png" alt=""> <br>
+							<li>Konfigurasi juga IPv6 pada Laptop 2 yang berada dalam rentang yang sama dengan IP sebelumnya. Dipilih 5555:5555:5555::2 /64.</li><br>
 							
-							<li>Kemudian lakukan ping dari router ke smartphone. Dapat dilihat bahwa Router 1 sudah terhubung baik ke Router 2 maupun ke Smartphone.</li><br>
+							<img src="img/Langkah_j.png" alt=""> <br>
 							
-							<img src="img/Percobaan 2/Langkah_n.png" alt=""> <br>
+							<li>Selanjutnya agar jaringan lokal pada Router 1 dapat terhubung dengan Router 2, perlu dilakukan Routing. Sebagai contoh adalah menggunakan Static Routing. Untuk mengakses jaringan 3333:3333:3333::/64 maka Router 2 perlu memasukkan IP Router yang mengenal jaringan tersebut, yakni Router 1 yaitu 4444:4444:4444::1.</li><br>
+							
+							<img src="img/Langkah_k.png" alt=""> <br>
+							
+							<li>Tambahkan juga static routing pada Router 1 agar dapat menghubungi jaringan 5555:5555:5555::/64, yakni dengan melewati Router 2 dengan IP 4444:4444:4444::2.</li><br>
+							
+							<img src="img/Langkah_l.png" alt=""> <br>
+							
+							<li>Langkah terakhir adalah lakukan uji coba ping ke masing-masing laptop untuk memastikan perangkat sudah terhubung pada subnet yang berbeda dengan menggunakan IPv6.</li><br>
 						</ol>
 
 						<!--  -->
 						<h2>Hasil Percobaan</h2> <hr>
 
-						<img src="img/Percobaan 2/Langkah_n.png" alt=""> <br>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Percobaan 3 -->
-	<section id="percobaan3" class="organic">
-		<div class="bg">
-			<div class="container">
-				<br><br>
-				<div class="card">
-					<div class="card-body">
-						
-						<!--  -->
-						<h1 class="text-center oswald">Percobaan 3 : Wireless Bridge</h1> <hr>
-						
-						<!--  -->
-						<h2>Topologi</h2> <hr>
-						
-						<img src="img/Percobaan 3/Topologi 3.png" alt=""> <br>
-
-						<!--  -->
-						<h2>Langkah Percobaan</h2> <hr>
-
-						<ol>
-							<li>Percobaan 3 memiliki topologi yang mirip dengan percobaan 1. Lakukan koneksi antara Laptop 1 dengan Router 1 dan Laptop 2 dengan Router 2 seperti yang telah dilakukan pada percobaan 1.</li><br>
-            
-							<li>Pada Router 1, ubah mode Wireless Router menjadi bridge, dan isi SSID yang diinginkan, yakni WB-11.</li><br>
-							
-							<img src="img/Percobaan 3/Langkah_o.png" alt=""> <br>
-							
-							<li>Beri IP pada interface wlan1 yang sudah dibuat pada tab IP \texttt{>} Addresses, dengan IP yaitu 4.33.59.1/24. Tambahkan juga IP Router 1 pada interface yang terhubung dengan Laptop 1 (ether3) untuk membuat jaringan lokal yang akan dihubungkan ke Router 2 dengan metode bridge, yaitu 192.168.1.1/24.</li><br>
-							
-							<img src="img/Percobaan 3/Langkah_p.png" alt=""> <br>
-							
-							<li>Kemudian atur IP pada Laptop 1 dengan mengubah pengaturan pada Control Panel \texttt{>} Network and Internet \texttt{>} Network and Sharing Center \texttt{>} Ethernet \texttt{>} Properties \texttt{>} IPv4 \texttt{>} dan ubah IP perangkat yang masih satu jaringan dengan IP Lokal yang diinginkan, yakni 192.168.1.10 dengan prefix /24 atau Subnet mask 255.255.255.0.</li><br>
-							
-							<img src="img/Percobaan 3/Langkah_q.png" alt=""> <br>
-							
-							<li>Masih pada Router 1, tambahkan bridge untuk menghubungkan interface wlan1 dan ether3. Buat bridge pada tab Bridge \texttt{>} + \texttt{>} dan beri nama bridge yang diinginkan. Selanjutnya tambahkan port interface yang akan dihubungkan pada tab Ports, dan tambahkan interface wlan1 dan ether3 pada bridge sesuai yang telah dibuat sebelumnya.</li><br>
-							
-							<img src="img/Percobaan 3/Langkah_r.png" alt=""> <br>
-							
-							<li>Kemudian beralih ke Router 2, atur interface Wireless ke mode station pseudobridge. Kemudian cari sinyal yang sudah dipancarkan oleh Router 1. Pilih Scan kemudian cari SSID yang sama dengan yang diisikan pada Router 1, yakni WB-11.</li><br>
-							
-							<img src="img/Percobaan 3/Langkah_s.png" alt=""> <br>
-							
-							<li>Beri IP pada interface wlan1 yang sudah dibuat pada tab IP \texttt{>} Addresses, dengan IP yang satu jaringan dengan wlan1 Router 1 yaitu 4.33.59.2/24. Tambahkan juga IP Router 2 pada interface yang terhubung dengan Laptop 2 (ether3) untuk membuat jaringan lokal yang akan dihubungkan ke Router 1 dengan metode bridge, yaitu 192.168.1.3/24.</li><br>
-
-							<img src="img/Percobaan 3/Langkah_t.png" alt=""> <br>
-							
-							<li>Kemudian atur IP pada Laptop 2 dengan mengubah pengaturan pada Control Panel \texttt{>} Network and Internet \texttt{>} Network and Sharing Center \texttt{>} Ethernet \texttt{>} Properties \texttt{>} IPv4 \texttt{>} dan ubah IP perangkat yang masih satu jaringan dengan IP Lokal yang diinginkan, yakni 192.168.1.4 dengan prefix /24 atau Subnet mask 255.255.255.0.</li><br>
-							
-							<img src="img/Percobaan 3/Langkah_u.png" alt=""> <br>
-							
-							<li>Tambahkan juga bridge pada Router 2 untuk menghubungkan interface wlan1 dan ether3. Buat bridge pada tab Bridge \texttt{>} + \texttt{>} dan beri nama bridge yang diinginkan. Selanjutnya tambahkan port interface yang akan dihubungkan pada tab Ports, dan tambahkan interface wlan1 dan ether3 pada bridge sesuai yang telah dibuat sebelumnya.</li><br>
-
-							<img src="img/Percobaan 3/Langkah_v.png" alt=""> <br>
-							
-							<li>Lakukan uji coba ping dari antara kedua router. Dapat dilihat bahwa kedua router sudah terhubung.</li><br>
-							
-							<img src="img/Percobaan 3/Langkah_w.png" alt=""> <br>
-							
-							<li>Langkah terakhir adalah melakukan uji coba ping dari antara kedua laptop. Dapat dilihat bahwa Laptop 1 dapat berkomunikasi dengan Laptop 2 dan sebaliknya dengan menggunakan metode Wireless Bridge.</li><br>
-							
-							<img src="img/Percobaan 3/Langkah_x.png" alt=""> <br>
-						</ol>
-
-						<!--  -->
-						<h2>Hasil Percobaan</h2> <hr>
-
-						<img src="img/Percobaan 3/Langkah_x.png" alt=""> <br>
+						<img src="img/Langkah_m.png" alt=""> <br>
 						
 					</div>
 				</div>
