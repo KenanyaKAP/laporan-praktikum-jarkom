@@ -21,7 +21,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;664;700&display=swap"
 		rel="stylesheet">
 
-
+	<!-- Addons -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
 	<title>Kelompok 11 - Modul 3</title>
 	<link rel="icon" href="../img/logo.png">
@@ -59,7 +61,7 @@
 						
 						<h1 class="text-center oswald">Mengelola dan Membagi Bandwith Menggunakan Qos (Simple Queue)</h1> <hr>
 						
-						<img src="img/bandwidth.webp" alt=""> <br>
+						<a href="img/bandwidth.webp" class="image-link"><img src="img/bandwidth.webp" alt=""></a><br>
 
 						<p>
 							Jaringan komputer adalah sistem yang menghubungkan beberapa perangkat komputer untuk berbagi data, sumber daya, dan layanan melalui protokol komunikasi. Namun, dalam jaringan yang kompleks, manajemen jaringan yang efektif menjadi penting. Dalam manajemen jaringan yang baik perlu diperhatikan beberapa hal seperti pengaturan bandwidth dan Quality of Service (QoS). 
@@ -138,7 +140,7 @@
 						<!--  -->
 						<h2>Topologi</h2> <hr>
 						
-						<img src="img/Topologi.png" alt=""> <br>
+						<a href="img/Topologi.png" class="image-link"><img src="img/Topologi.png" alt=""></a><br>
 
 						<!--  -->
 						<h2>Langkah Percobaan</h2> <hr>
@@ -149,55 +151,55 @@
 							<li>Sambungkan kabel UTP dari Laptop 1 ke Router 1 pada interface ether2</li><br>
 							<li>Buka aplikasi WinBox dan lakukan koneksi ke Router 1</li><br>
 							
-							<img src="img/Langkah_a.png" alt=""> <br>
+							<a href="img/Langkah_a.png" class="image-link"><img src="img/Langkah_a.png" alt=""></a><br>
 
 							<li>Seting DHCP Client pada Router 1 agar Router mendapatkan IP secara otomatis dari Internet ITS. Atur pada tab IP > DHCP Client > + > dan pilih interface yang terhubung pada Switch ITS, yakni ether1</li><br>
 							
-							<img src="img/Langkah_b.png" alt=""> <br>
+							<a href="img/Langkah_b.png" class="image-link"><img src="img/Langkah_b.png" alt=""></a><br>
 							
 							<li>Lakukan uji coba ping ke 8.8.8.8 untuk memastikan Router 1 sudah terkoneksi ke internet. Dapat dilihat bahwa Router 1 sudah terhubung ke jaringan luar.</li><br>
 
-							<img src="img/Langkah_c.png" alt=""> <br>
+							<a href="img/Langkah_c.png" class="image-link"><img src="img/Langkah_c.png" alt=""></a><br>
 							
 							<li>Buat Jaringan Lokal untuk Router 1 dan Laptop 1, yakni dengan cara nemambahkan IP Router 1 ether2, pada tab IP > Addresses > dan tambah IP. IP yang digunakan adalah gabungan IP dari angka akhir NRP praktikan, yakni 4.13.33.1 /24</li><br>
 							
-							<img src="img/Langkah_d.png" alt=""> <br>
+							<a href="img/Langkah_d.png" class="image-link"><img src="img/Langkah_d.png" alt=""></a><br>
 							
 							<li>Seting DHCP Server pada Router 1 ether 2 agar laptop yang terhubung bisa mendapatkan IP secara otomatis untuk membentuk jaringan lokal. Atur pada tab IP > DHCP Server > DHCP Setup. Pilih interface yang terhubung ke Laptop 1, yakni ether2. Kemudian atur jaringan pada 4.13.33.0/24, Default Gateway 4.13.33.1, Range dari 4.13.33.2 - 4.13.33.254, dan DNS default yang dimiliki internet ITS.</li><br>
 							
-							<img src="img/Langkah_e.png" alt=""> <br>
+							<a href="img/Langkah_e.png" class="image-link"><img src="img/Langkah_e.png" alt=""></a><br>
 							
 							<li>Pastikan Laptop 1 sudah mendapatkan IP dengan mengetikkan 'ipconfig' pada Command Prompt (CMD). Dapat dilihat Laptop sudah mendapatkan IP yakni 4.13.33.253 /24</li><br>
 							
-							<img src="img/Langkah_f.png" alt=""> <br>
+							<a href="img/Langkah_f.png" class="image-link"><img src="img/Langkah_f.png" alt=""></a><br>
 							
 							<li>Selanjutnya, agar Laptop 1 yang berada pada jaringan lokal dapat terhubung ke jaringan publik, dapat digunakan layanan NAT yang akan mentranslasikan IP lokal beserta port perangkat agar dapat terhubung dengan jaringan publik. Atur NAT pada tab IP </li><br>
 							> Firewall > NAT > + > pada Chain, pilih srcnat dan pada Out Interface, pilih interface yang terhubung ke jaringan luar, yakni ether1 yang terhubung ke internet ITS. Kemudian pilih tab action dan pilih masquerade pada action.
 							
-							<img src="img/Langkah_g.png" alt=""> <br>
+							<a href="img/Langkah_g.png" class="image-link"><img src="img/Langkah_g.png" alt=""></a><br>
 
 							<li>Kemudian lakukan uji coba ping ke 8.8.8.8 untuk memastikan Laptop 1 sudah terhubung dengan jaringan luar. Dapat dilihat Laptop 1 sudah dapat berkomunikasi dengan jaringan luar.</li><br>
 							
-							<img src="img/Langkah_h.png" alt=""> <br>
+							<a href="img/Langkah_h.png" class="image-link"><img src="img/Langkah_h.png" alt=""></a><br>
 							
 							<li>Selanjutnya lakukan uji test bandwidth sebelum dibatasi, dapat menggunakan website <a href="https://www.speedtest.net/" target="_blank">speedtest.net</a>. Dapat dilihat sebelum dibatasi kecepatannya sekitar 92 Mbps.</li><br>
 							
-							<img src="img/Langkah_i.png" alt=""> <br>
+							<a href="img/Langkah_i.png" class="image-link"><img src="img/Langkah_i.png" alt=""></a><br>
 							
 							<li>Kemudian untuk membatasi bandwidth, dapat dilakukan pada tab Queues > + > beri nama yang diinginkan, dan pada target isikan dengan IP Address perangkat yang ingin dibatasi bandwidthnya, pada kasus ini adalah Laptop 1 dengan IP 4.13.33.253. Pada Max Limit, isikan dengan 10M. Max Limit adalah batas maksimal yang akan didapatkan perangkat. Kemudian beralih ke tab Advance, pada Limit At, isikan dengan 5M. Sehingga jika router terhubung ke banyak perangkat, bandwidth akan dibagi ke masing-masing perangkat secara merata dengan bandwidth minimal 5Mbps dan maksimal 10Mbps.</li><br>
 							
-							<img src="img/Langkah_j.png" alt=""> <br>
+							<a href="img/Langkah_j.png" class="image-link"><img src="img/Langkah_j.png" alt=""></a><br>
 							
 							<li>Lakukan uji test bandwidth kembali untuk mengecek apakah bandwidth perangkat sudah dibatasi. Dapat dilihat bandwidth yang diterima perangkat sudah dibatasi yakni sekitar 9Mbps.</li><br>
 							
-							<img src="img/Langkah_k.png" alt=""> <br>
+							<a href="img/Langkah_k.png" class="image-link"><img src="img/Langkah_k.png" alt=""></a><br>
 							
 						</ol>
 
 						<!--  -->
 						<h2>Hasil Percobaan</h2> <hr>
 
-						<img src="img/Langkah_k.png" alt=""> <br>
+						<a href="img/Langkah_k.png" class="image-link"><img src="img/Langkah_k.png" alt=""></a><br>
 						
 					</div>
 				</div>
@@ -224,6 +226,23 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
+	
+	<!-- Addons -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('.image-link').magnificPopup({
+			type: 'image',
+			gallery: {
+			  enabled: true
+			},
+			zoom: {
+			  enabled: true
+			}
+		  });
+		});
+	</script>
 
 	<!-- My JavaScript -->
 	<script src="script.js"></script>

@@ -21,7 +21,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;664;700&display=swap"
 		rel="stylesheet">
 
-
+	<!-- Addons -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
 	<title>Kelompok 11 - Modul 4</title>
 	<link rel="icon" href="../img/logo.png">
@@ -59,7 +61,7 @@
 						
 						<h1 class="text-center oswald">Konfigurasi VPN (Virtual Private\\Network) PPTP PadaMikrotik</h1> <hr>
 						
-						<img src="img/vpn.webp" alt=""> <br>
+						<a href="img/vpn.webp" class="image-link"><img src="img/vpn.webp" alt=""></a><br>
 
 						<p>
 							VPN, singkatan dari Virtual Private Network, adalah sebuah teknologi yang menciptakan koneksi jaringan pribadi antara beberapa perangkat melalui internet. Fungsi utama VPN adalah untuk mengamankan dan menjaga privasi saat mentransmisikan data melalui jaringan publik. Dalam operasinya, VPN menyembunyikan alamat IP pengguna dan mengenkripsi data agar tidak dapat diakses oleh pihak yang tidak berwenang.
@@ -142,7 +144,7 @@
 						<!--  -->
 						<h2>Topologi</h2> <hr>
 						
-						<img src="img/Topologi.png" alt=""> <br>
+						<a href="img/Topologi.png" class="image-link"><img src="img/Topologi.png" alt=""></a><br>
 
 						<!--  -->
 						<h2>Langkah Percobaan</h2> <hr>
@@ -152,65 +154,65 @@
 							<li>Sambungkan kabel UTP dari Laptop 1 ke Router 1 pada interface ether2</li><br>
 							<li>Buka aplikasi WinBox dan lakukan koneksi ke Router 1</li><br>
 							
-							<img src="img/Langkah_3.png" alt=""> <br>
+							<a href="img/Langkah_3.png" class="image-link"><img src="img/Langkah_3.png" alt=""></a><br>
 							
 							<li>Seting DHCP Client pada Router 1 agar Router mendapatkan IP secara otomatis dari Internet ITS. Atur pada tab IP \texttt{>} DHCP Client \texttt{>} + \texttt{>} dan pilih interface yang terhubung pada Switch ITS, yakni ether1</li><br>
 
-							<img src="img/Langkah_4.png" alt=""> <br>
+							<a href="img/Langkah_4.png" class="image-link"><img src="img/Langkah_4.png" alt=""></a><br>
 							
 							<li>Lakukan uji coba ping ke 8.8.8.8 untuk memastikan Router 1 sudah terkoneksi ke internet. Dapat dilihat bahwa Router 1 sudah terhubung ke jaringan luar.</li><br>
 
-							<img src="img/Langkah_5.png" alt=""> <br>
+							<a href="img/Langkah_5.png" class="image-link"><img src="img/Langkah_5.png" alt=""></a><br>
 
 							<li>Buat Jaringan Lokal untuk Router 1 dan Laptop 1, yakni dengan cara nemambahkan IP Router 1 ether2, pada tab IP \texttt{>} Addresses \texttt{>} dan tambah IP. IP yang digunakan adalah gabungan IP dari angka akhir NRP praktikan, yakni 4.13.33.1 /24</li><br>
 
-							<img src="img/Langkah_6.png" alt=""> <br>
+							<a href="img/Langkah_6.png" class="image-link"><img src="img/Langkah_6.png" alt=""></a><br>
 							
 							<li>Seting DHCP Server pada Router 1 ether 2 agar laptop yang terhubung bisa mendapatkan IP secara otomatis untuk membentuk jaringan lokal. Atur pada tab IP \texttt{>} DHCP Server \texttt{>} DHCP Setup. Pilih interface yang terhubung ke Laptop 1, yakni ether2. Kemudian atur jaringan pada 4.13.33.0/24, Default Gateway 4.13.33.1, Range dari 4.13.33.2 - 4.13.33.254, dan DNS default yang dimiliki internet ITS.</li><br>
 
-							<img src="img/Langkah_7.png" alt=""> <br>
+							<a href="img/Langkah_7.png" class="image-link"><img src="img/Langkah_7.png" alt=""></a><br>
 
 							<li>Pastikan Laptop 1 sudah mendapatkan IP dengan mengetikkan 'ipconfig' pada Command Prompt (CMD). Dapat dilihat Laptop sudah mendapatkan IP yakni 4.13.33.254 /24</li><br>
 
-							<img src="img/Langkah_8.png" alt=""> <br>
+							<a href="img/Langkah_8.png" class="image-link"><img src="img/Langkah_8.png" alt=""></a><br>
 							
 							<li>Lakukan ping 2 arah, yaitu Router 1 ke Laptop 1 dan sebaliknya untuk memastikan kedua perangkat dapat saling berkomunikasi</li><br>
 
-							<img src="img/Langkah_9.png" alt=""> <br>
+							<a href="img/Langkah_9.png" class="image-link"><img src="img/Langkah_9.png" alt=""></a><br>
 							
 							<li>Seting VPN yang akan digunakan untuk membuat tunnel. VPN dibuat dengan menggunakan layanan Point to Point Tunnel Protocol Server (PPTP Server), pada tab PPP \texttt{>} PPTP Server.</li><br>
 
-							<img src="img/Langkah_10.png" alt=""> <br>
+							<a href="img/Langkah_10.png" class="image-link"><img src="img/Langkah_10.png" alt=""></a><br>
 							
 							<li>Langkah selanjutnya adalah membuat PPTP Client pada tab Secret, dengan konfigurasi Username "PPTP-11", password "12345678", Service "pptp", profile "default-encryption". Local IP Address adalah IP address tunnel pada sisi server, diisikan dengan "13.33.59.1" dan Remote Address adalah IP yang akan Client dapatkan, diisikan dengan "13.33.59.2"</li><br>
 
-							<img src="img/Langkah_11.png" alt=""> <br>
+							<a href="img/Langkah_11.png" class="image-link"><img src="img/Langkah_11.png" alt=""></a><br>
 
 							<li>Selanjutnya beralih ke Laptop 2. Pastikan Laptop 2 sudah terkoneksi dengan internet melalui internet ITS.</li><br>
 
-							<img src="img/Langkah_12.png" alt=""> <br>
+							<a href="img/Langkah_12.png" class="image-link"><img src="img/Langkah_12.png" alt=""></a><br>
 							
 							<li>Lakukan uji coba ping pada alamat lokal Router 1 "ping 4.13.33.1". Dapat dilihat bahwa Laptop 2 belum terhubung pada jaringan lokal.</li><br>
 							
-							<img src="img/Langkah_13.png" alt=""> <br>
+							<a href="img/Langkah_13.png" class="image-link"><img src="img/Langkah_13.png" alt=""></a><br>
 							
 							<li>Selanjutnya adalah membuat konfigurasi VPN untuk Laptop 2. Buka Pengaturan pada Windows, cari VPN, dan tambahkan VPN</li><br>
 							
-							<img src="img/Langkah_14.png" alt=""> <br>
+							<a href="img/Langkah_14.png" class="image-link"><img src="img/Langkah_14.png" alt=""></a><br>
 
 							<li>Konfigurasi VPN yakni VPN Provider "Windows (built-in)", Connection Name dapat diisikan bebas "terserah 11", server address adalah IP Publik Router 1, yakni "10.3.145.165", VPN type adalah "PPTP", kemudian isikan username "PPTP-11" dan password "12345678", dan klik "Connect"</li><br>
 
-							<img src="img/Langkah_15.png" alt=""> <br>
+							<a href="img/Langkah_15.png" class="image-link"><img src="img/Langkah_15.png" alt=""></a><br>
 							
 							<li>Lakukan pengecekan kembali dengan melakukan ping pada IP lokal router "4.13.33.1" ataupun Laptop 1 "4.13.33.254". Dapat dilihat bahwa Laptop 2 sudah terhubung pada jaringan lokal menggunakan VPN. </li><br>
 
-							<img src="img/Langkah_16.png" alt=""> <br>
+							<a href="img/Langkah_16.png" class="image-link"><img src="img/Langkah_16.png" alt=""></a><br>
 						</ol>
 
 						<!--  -->
 						<h2>Hasil Percobaan</h2> <hr>
 
-						<img src="img/Langkah_16.png" alt=""> <br>
+						<a href="img/Langkah_16.png" class="image-link"><img src="img/Langkah_16.png" alt=""></a><br>
 						
 					</div>
 				</div>
@@ -237,6 +239,23 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
+
+	<!-- Addons -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('.image-link').magnificPopup({
+			type: 'image',
+			gallery: {
+			  enabled: true
+			},
+			zoom: {
+			  enabled: true
+			}
+		  });
+		});
+	</script>
 
 	<!-- My JavaScript -->
 	<script src="script.js"></script>

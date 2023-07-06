@@ -21,7 +21,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;664;700&display=swap"
 		rel="stylesheet">
 
-
+	<!-- Addons -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
 	<title>Kelompok 11 - Modul 2</title>
 	<link rel="icon" href="../img/logo.png">
@@ -60,7 +62,7 @@
 						
 						<h1 class="text-center oswald">Routing Statis dan Routing Dinamis</h1> <hr>
 						
-						<img src="img/routing.avif" alt=""> <br>
+						<a href="img/routing.avif" class="image-link"><img src="img/routing.avif" alt=""></a><br>
 
 						<p>
 							Router merupakan sebuah alat yang berfungsi untuk mengirimkan paket data dari satu jaringan ke jaringan lainnya.  Proses pengiriman data tersebut dinamakan dengan routing. Router disebut sebagai perangkat jaringan yang cerdas karena selain memiliki CPU dan memory juga mampu menentukan jalur mana yang harus paket data lewati untuk menghubungkan beberapa jaringan komputer yang berbeda. Dengan proses routing ini, paket data bisa keluar serta masuk ke jaringan lainnya dengan bebas namun masih dalam aturan yang sudah ditetapkan.
@@ -142,7 +144,7 @@
 						<!--  -->
 						<h2>Topologi</h2> <hr>
 						
-						<img src="img/Topologi.png" alt=""> <br>
+						<a href="img/Topologi.png" class="image-link"><img src="img/Topologi.png" alt=""></a><br>
 
 						<!--  -->
 						<h2>Langkah Percobaan</h2> <hr>
@@ -153,41 +155,41 @@
 							<li>Sambungkan kabel UTP dari Router 1 ke Router 2 masing-masing pada interface ether 2</li><br>
 							<li>Buka aplikasi WinBox pada Laptop 1 dan lakukan koneksi ke Router 1</li><br>
 							
-							<img src="img/Langkah_a.png" alt=""> <br>
+							<a href="img/Langkah_a.png" class="image-link"><img src="img/Langkah_a.png" alt=""></a><br>
 							
 							<li>Lakukan konfigurasi IP pada router 1 dengan IP 4.4.4.4/24 dan hubungkan pada ether 3. Kemudian, konfigurasi IP pada router 1 dengan IP 33.33.33.33/24 dan hubungkan pada ether 2. Pada router 1 ini, interface ether 3 digunakan untuk melakukan koneksi dengan laptop 1. Sedangkan, interface ether 2 digunakan untuk melakukan koneksi dengan router 2.</li><br>
 
-							<img src="img/Langkah_b.png" alt=""> <br>
+							<a href="img/Langkah_b.png" class="image-link"><img src="img/Langkah_b.png" alt=""></a><br>
 							
 							<li>Pada laptop 1, lakukan konfigurasi IP secara statis. Lakukan dengan membuka Control Panel > Network & internet > Network & Sharing Center. Kemudian buka Ethernet dan pilih Properties > Internet Protocol Version 4  (TCP/IPv4). Ubah menjadi Use the Following IP Address. Isi IP Address menjadi 4.4.4.5 dan isi Subnet Mask menjadi 255.255.255.0.</li><br>
 
-							<img src="img/Langkah_c.png" alt=""> <br>
+							<a href="img/Langkah_c.png" class="image-link"><img src="img/Langkah_c.png" alt=""></a><br>
 							
 							<li>Lakukan routing statis. Buka pada tab IP > Routes, lalu tambahkan jaringan. Masukkan alamat jaringan yang ingin dituju, yaitu 13.13.13.0/24 melalui alamat Gateway pada router 2 yaitu 33.33.33.34.</li><br>
 							
-							<img src="img/Langkah_d.png" alt=""> <br>
+							<a href="img/Langkah_d.png" class="image-link"><img src="img/Langkah_d.png" alt=""></a><br>
 
 							<li>Buka aplikasi WinBox pada Laptop 2 dan lakukan koneksi ke Router 2</li><br>
 
-							<img src="img/Langkah_e.png" alt=""> <br>
+							<a href="img/Langkah_e.png" class="image-link"><img src="img/Langkah_e.png" alt=""></a><br>
 							
 							<li>Lakukan konfigurasi IP pada router 2 dengan IP 13.13.13.13/24 dan hubungkan pada ether 3. Kemudian, konfigurasi IP pada router 2 dengan IP 33.33.33.34/24 dan hubungkan pada ether 2. Pada router 2 ini, interface ether 3 digunakan untuk melakukan koneksi dengan laptop 2. Sedangkan, interface ether 2 digunakan untuk melakukan koneksi dengan router 1.</li><br>
 
-							<img src="img/Langkah_f.png" alt=""> <br>
+							<a href="img/Langkah_f.png" class="image-link"><img src="img/Langkah_f.png" alt=""></a><br>
 							
 							<li>Pada laptop 2, lakukan konfigurasi IP secara statis. Lakukan dengan membuka Control Panel > Network & internet > Network & Sharing Center. Kemudian buka Ethernet dan pilih Properties > Internet Protocol Version 4  (TCP/IPv4). Ubah menjadi Use the Following IP Address. Isi IP Address menjadi 13.13.13.14 dan isi Subnet Mask menjadi 255.255.255.0.</li><br>
 
-							<img src="img/Langkah_g.png" alt=""> <br>
+							<a href="img/Langkah_g.png" class="image-link"><img src="img/Langkah_g.png" alt=""></a><br>
 							
 							<li>Lakukan routing statis. Buka pada tab IP > Routes, lalu tambahkan jaringan. Masukkan alamat jaringan yang ingin dituju, yaitu 4.4.4.0/24 melalui alamat Gateway pada router 2 yaitu 33.33.33.33.</li><br>
 							
-							<img src="img/Langkah_h.png" alt=""> <br>
+							<a href="img/Langkah_h.png" class="image-link"><img src="img/Langkah_h.png" alt=""></a><br>
 						</ol>
 
 						<!--  -->
 						<h2>Hasil Percobaan</h2> <hr>
 
-						<img src="img/Langkah_i.png" alt=""> <br>
+						<a href="img/Langkah_i.png" class="image-link"><img src="img/Langkah_i.png" alt=""></a><br>
 						
 					</div>
 				</div>
@@ -209,7 +211,7 @@
 						<!--  -->
 						<h2>Topologi</h2> <hr>
 						
-						<img src="img/Topologi.png" alt=""> <br>
+						<a href="img/Topologi.png" class="image-link"><img src="img/Topologi.png" alt=""></a><br>
 
 						<!--  -->
 						<h2>Langkah Percobaan</h2> <hr>
@@ -222,17 +224,17 @@
 							<li>Pada masing-masing laptop, ubah konfigurasi ethernet menjadi dinamis. Lakukan dengan membuka Control Panel > Network & internet > Network & Sharing Center. Kemudian buka Ethernet dan pilih Properties > Internet Protocol Version 4  (TCP/IPv4) > Obtain an IP Address Automatically.</li><br>
 							<li>Pada laptop 1, lakukan routing dinamis. Buka pada tab Routing > RIP. Pada Interface, tambahkan interface baru kemudian ubah interface menjadi ether 2 dengan receive & send pada v1. Pada Network, tambahkan 2 network baru, yaitu 4.4.4.0/24 dan 33.33.33.0/24. Pada Neighbours, tambahkan alamat router yang dituju yaitu 33.33.33.34.</li><br>
 							
-							<img src="img/Langkah_j.png" alt=""> <br>
+							<a href="img/Langkah_j.png" class="image-link"><img src="img/Langkah_j.png" alt=""></a><br>
 							
 							<li>Pada laptop 2, lakukan routing dinamis. Buka pada tab Routing > RIP. Pada Interface, tambahkan interface baru kemudian ubah interface menjadi ether 2 dengan receive & send pada v1. Pada Network, tambahkan 2 network baru, yaitu 13.13.13.0/24 dan 33.33.33.0/24. Pada Neighbours, tambahkan alamat router yang dituju yaitu 33.33.33.33.</li><br>
 							
-							<img src="img/Langkah_k.png" alt=""> <br>
+							<a href="img/Langkah_k.png" class="image-link"><img src="img/Langkah_k.png" alt=""></a><br>
 						</ol>
 
 						<!--  -->
 						<h2>Hasil Percobaan</h2> <hr>
 
-						<img src="img/Langkah_l.png" alt=""> <br>
+						<a href="img/Langkah_l.png" class="image-link"><img src="img/Langkah_l.png" alt=""></a><br>
 						
 					</div>
 				</div>
@@ -259,6 +261,23 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
+
+	<!-- Addons -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('.image-link').magnificPopup({
+			type: 'image',
+			gallery: {
+			  enabled: true
+			},
+			zoom: {
+			  enabled: true
+			}
+		  });
+		});
+	</script>		
 
 	<!-- My JavaScript -->
 	<script src="script.js"></script>

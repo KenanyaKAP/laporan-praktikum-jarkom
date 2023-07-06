@@ -21,7 +21,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;664;700&display=swap"
 		rel="stylesheet">
 
-
+	<!-- Addons -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
 	<title>Kelompok 11 - Modul 5</title>
 	<link rel="icon" href="../img/logo.png">
@@ -60,7 +62,7 @@
 						
 						<h1 class="text-center oswald">Implementasi dan Konfigurasi IP Version 6</h1> <hr>
 						
-						<img src="img/wireless.webp" alt=""> <br>
+						<a href="img/ipv6.webp" class="image-link"><img src="img/ipv6.webp" alt=""> <br></a>
 
 						<p>
 							IPv6 (Internet Protocol Address v6) adalah sebuah protokol standar yang digunakan untuk mengidentifikasi dan mengarahkan alamat jaringan pada komputer. Dibandingkan dengan versi sebelumnya yaitu IPv4, IPv6 memiliki format alamat yang lebih panjang dengan 128 bit. Hal ini memungkinkan jumlah alamat yang jauh lebih besar, mengatasi masalah penipisan alamat IPv4 yang semakin meningkat. IPv6 juga memiliki fitur tambahan, seperti pemantauan aliran lalu lintas, peningkatan keamanan, dan peningkatan kualitas layanan. Hal ini menjadikan IPv6 sebagai solusi jangka panjang untuk pertumbuhan internet yang pesat dan meningkatnya kebutuhan akan alamat.
@@ -139,7 +141,7 @@
 						<!--  -->
 						<h2>Topologi</h2> <hr>
 						
-						<img src="img/Topologi 1.png" alt=""> <br>
+						<a href="img/Topologi 1.png" class="image-link"><img src="img/Topologi 1.png" alt="" style="max-height:30em;object-fit: contain; "> <br></a>
 
 						<!--  -->
 						<h2>Langkah Percobaan</h2> <hr>
@@ -149,25 +151,25 @@
 							<li>Buka aplikasi WinBox pada Laptop 1 dan lakukan koneksi ke Router 1</li><br>
 							<li>Pertama-tama, konfigurasi router untuk mengaktifkan layanan IPv6. Caranya pada tab System \texttt{>} Packages \texttt{>} IPv6 \texttt{>} Enable. Kemudian lakukan reboot pada router agar layanan dapat digunakan.</li><br>
 							
-							<img src="img/Langkah_a.png" alt=""> <br>
+							<a href="img/Langkah_a.png" class="image-link"><img src="img/Langkah_a.png" alt=""> <br></a>
 							
 							<li>Konfigurasi IPv6 Router 1 pada ether2 dengan IP yakni 3333:3333:3333::1 /64. Sehingga rentang IP yang berada pada jaringan yang sama dengan router ini adalah pada IP Address 3333:3333:3333:0:0000:0000:0000:0000 hingga 3333:3333:3333:0:ffff:ffff:ffff:ffff.</li><br>
 							
-							<img src="img/Langkah_b.png" alt=""> <br>
+							<a href="img/Langkah_b.png" class="image-link"><img src="img/Langkah_b.png" alt=""> <br></a>
 							
 							<li>Konfigurasi juga IPV6 pada Laptop 1 dalam subnet yang sama dengan IP Router 1. Dipilih IP yakni 3333:3333:3333::2 /64.</li><br>
 							
-							<img src="img/Langkah_c.png" alt=""> <br>
+							<a href="img/Langkah_c.png" class="image-link"><img src="img/Langkah_c.png" alt=""> <br></a>
 							
 							<li>Setelah IPv6 pada Router 1 dan Laptop 1 sudah dikonfigurasi, lakukan uji coba ping pada kedua perangkat untuk memastikan keduanya sudah saling terhubung.</li><br>
 							
-							<img src="img/Langkah_d.png" alt=""> <br>
+							<a href="img/Langkah_d.png" class="image-link"><img src="img/Langkah_d.png" alt=""> <br></a>
 						</ol>
 
 						<!--  -->
 						<h2>Hasil Percobaan</h2> <hr>
 
-						<img src="img/Langkah_d.png" alt=""> <br>
+						<a href="img/Langkah_d.png" class="image-link"><img src="img/Langkah_d.png" alt=""> <br></a>
 						
 					</div>
 				</div>
@@ -189,7 +191,7 @@
 						<!--  -->
 						<h2>Topologi</h2> <hr>
 						
-						<img src="img/Topologi 2.png" alt=""> <br>
+						<a href="img/Topologi 2.png" class="image-link"><img src="img/Topologi 2.png" alt=""> <br></a>
 
 						<!--  -->
 						<h2>Langkah Percobaan</h2> <hr>
@@ -201,35 +203,35 @@
 
 							<li>Lakukan juga konfigurasi pada Router 2 untuk mengaktifkan layanan IPv6. Caranya pada tab System \texttt{>} Packages \texttt{>} IPv6 \texttt{>} Enable. Kemudian lakukan reboot pada router agar layanan dapat digunakan.</li><br>
 
-							<img src="img/Langkah_e.png" alt=""> <br>
+							<a href="img/Langkah_e.png" class="image-link"><img src="img/Langkah_e.png" alt=""> <br></a>
 
 							<li>Sambungkan Router 1 dan Router 2 pada interface ether3. Kemudian tambahkan IPv6 pada router 2 dengan IP Address 4444:4444:4444::2 /64. Sehingga rentang IPnya dimulai dari 4444:4444:4444:0:0000:0000:0000:0000 hingga 4444:4444:4444:0:ffff:ffff:ffff:ffff.</li><br>
 							
-							<img src="img/Langkah_f.png" alt=""> <br>
+							<a href="img/Langkah_f.png" class="image-link"><img src="img/Langkah_f.png" alt=""> <br></a>
 							
 							<li>Tambahkan juga IPv6 pada Router 1 yang berada dalam rentang IP sebelumnya. Dipilih 4444:4444:4444::1 /64.</li><br>
 							
-							<img src="img/Langkah_g.png" alt=""> <br>
+							<a href="img/Langkah_g.png" class="image-link"><img src="img/Langkah_g.png" alt=""> <br></a>
 							
 							<li>Selanjutnya lakukan uji coba ping dari Router 1 ke Router 2 dan sebaliknya untuk memastikan kedua router sudah terhubung.</li><br>
 							
-							<img src="img/Langkah_h.png" alt=""> <br>
+							<a href="img/Langkah_h.png" class="image-link"><img src="img/Langkah_h.png" alt=""> <br></a>
 
 							<li>Konfigurasi IPv6 pada Router 2 dan Laptop 2 untuk membentuk jaringan lokal. IP Address yang dipilih adalah 5555:5555:5555::1 /64. Sehingga rentang IPnya dimulai dari 5555:5555:5555:0:0000:0000:0000:0000 hingga 5555:5555:5555:0:ffff:ffff:ffff:ffff.</li><br>
 							
-							<img src="img/Langkah_i.png" alt=""> <br>
+							<a href="img/Langkah_i.png" class="image-link"><img src="img/Langkah_i.png" alt=""> <br></a>
 							
 							<li>Konfigurasi juga IPv6 pada Laptop 2 yang berada dalam rentang yang sama dengan IP sebelumnya. Dipilih 5555:5555:5555::2 /64.</li><br>
 							
-							<img src="img/Langkah_j.png" alt=""> <br>
+							<a href="img/Langkah_j.png" class="image-link"><img src="img/Langkah_j.png" alt=""> <br></a>
 							
 							<li>Selanjutnya agar jaringan lokal pada Router 1 dapat terhubung dengan Router 2, perlu dilakukan Routing. Sebagai contoh adalah menggunakan Static Routing. Untuk mengakses jaringan 3333:3333:3333::/64 maka Router 2 perlu memasukkan IP Router yang mengenal jaringan tersebut, yakni Router 1 yaitu 4444:4444:4444::1.</li><br>
 							
-							<img src="img/Langkah_k.png" alt=""> <br>
+							<a href="img/Langkah_k.png" class="image-link"><img src="img/Langkah_k.png" alt=""> <br></a>
 							
 							<li>Tambahkan juga static routing pada Router 1 agar dapat menghubungi jaringan 5555:5555:5555::/64, yakni dengan melewati Router 2 dengan IP 4444:4444:4444::2.</li><br>
 							
-							<img src="img/Langkah_l.png" alt=""> <br>
+							<a href="img/Langkah_l.png" class="image-link"><img src="img/Langkah_l.png" alt=""> <br></a>
 							
 							<li>Langkah terakhir adalah lakukan uji coba ping ke masing-masing laptop untuk memastikan perangkat sudah terhubung pada subnet yang berbeda dengan menggunakan IPv6.</li><br>
 						</ol>
@@ -237,7 +239,7 @@
 						<!--  -->
 						<h2>Hasil Percobaan</h2> <hr>
 
-						<img src="img/Langkah_m.png" alt=""> <br>
+						<a href="img/Langkah_m.png" class="image-link"><img src="img/Langkah_m.png" alt=""> <br></a>
 						
 					</div>
 				</div>
@@ -264,6 +266,23 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
+
+	<!-- Addons -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('.image-link').magnificPopup({
+			type: 'image',
+			gallery: {
+			  enabled: true
+			},
+			zoom: {
+			  enabled: true
+			}
+		  });
+		});
+	</script>
 
 	<!-- My JavaScript -->
 	<script src="script.js"></script>
