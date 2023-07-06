@@ -123,3 +123,12 @@ html {
 ul {
 	list-style-type: "⇒    ";
 }
+
+.download-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: red;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+  }  
